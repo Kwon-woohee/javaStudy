@@ -80,7 +80,7 @@
     * 라이프타임 : 객체가 메모리에 남아있을 때까지.
     * ex) x와 y의 scope
 >`class Sample {`
->`    int x, y; //인스턴스 변수`
+`    int x, y; //인스턴스 변수`
 >`    static int result;`
 >`    void add(int a, int b) {`
 >`        x = a;`
@@ -88,7 +88,6 @@
 >`        int sum = x + y;`
 >`        System.out.println("Sum = " + sum);`
 >`    }`
->``
 >`    pubilc static void main(String[] args) {`
 >`        Sample obj = new Sample();`
 >`        obj.add(10, 20);`
