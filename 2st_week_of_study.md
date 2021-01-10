@@ -79,22 +79,22 @@
     * scope : 정적 메서드를 제외한 클래스 전체
     * 라이프타임 : 객체가 메모리에 남아있을 때까지.
     * ex) x와 y의 scope
-`class Sample {
-    int x, y; //인스턴스 변수
-    static int result;
-    void add(int a, int b) {
-        x = a;
-        y = b;
-        int sum = x + y;
-        System.out.println("Sum = " + sum);
-    }
+>`class Sample {`
+>`    int x, y; //인스턴스 변수`
+>`    static int result;`
+>`    void add(int a, int b) {`
+>`        x = a;`
+>`        y = b;`
+>`        int sum = x + y;`
+>`        System.out.println("Sum = " + sum);`
+>`    }`
+>``
+>`    pubilc static void main(String[] args) {`
+>`        Sample obj = new Sample();`
+>`        obj.add(10, 20);`
+>`    }`
+>`}`
 
-    pubilc static void main(String[] args) {
-        Sample obj = new Sample();
-        obj.add(10, 20);
-    }
-}
-`
 
 * Class Variables
     * 정의 : 클래스 내부, 모든 블록 외부에서 선언되고 static으로 표시된 변수
@@ -111,13 +111,40 @@
 
 ### 타입 변환, 캐스팅 그리고 타입 프로모션
 #### 타입 변환
+* 가지고 있던 데이터 타입이 아닌, 다른 데이터타입으로 변환하는 행위이다.
 #### 캐스팅
+* 자동으로 형변환을 하는 것이 아닌, 개발자가 직접 형변환하는 행위이다.
+* 정의 : 큰 데이터타입에서 작은 데이터 타입으로 형 변환되는 것.
+* ex) 형변환 예시 
+>`int a = 5;`
+> `double b = 0;`
+> `a = (int)b`
+
 #### 타입 프로모션
+* 정의 : 작은 데이터 타입에서 큰 데이터 타입으로 형 변환되는 것.
+* ex) 형변환 예시 
+>`double a = 0;`
+> `int b = 5;`
+> `a = b //자동으로 형변환(double로)됨`
 
 ### 1차 및 2차 배열 선언하기
 #### 1차 배열 선언하기
+* 데이터타입[] 이름 = 값;
+* ex) 1차 배열 선언
+> `int[] a = {1,2,3};`
+
 #### 2차 배열 선언하기
+* 데이터타입[][] 이름 = 값;
+* ex) 2차 배열 선언
+> `int[][] a = {1,2,3},{};`
+
 
 ### 타입 추론, var
 #### 타입추론
+* 코드 작성 당시 타입이 정해지지 않았지만, 컴파일러가 그 타입을 유추하는 것.
+* java9 이하에서는 지원하지 않는다. (lambda), generics제외)
 #### var
+* 데이터타입에 var를 입력한다.
+* 해당 명령어는 java10이상부터 지원한다.
+* ex) var사용 예시 (java10 이상)
+> `var name = "kwonwoohee"`
